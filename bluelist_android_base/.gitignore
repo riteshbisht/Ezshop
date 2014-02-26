@@ -5,6 +5,10 @@
 # files for the dex VM
 *.dex
 
+#often changed files
+/assets
+/libs
+
 # generated files
 bin/
 gen/
