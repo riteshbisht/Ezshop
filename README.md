@@ -12,10 +12,7 @@ You can clone this sample from Jazzhub with the following command:
 
     git clone https://hub.jazz.net/git/mobilecloud/BlueListAndroidv0
 
-<<<<<<< Upstream, based on c54117f364636e4c044d69db4c3c61f27e3c9367
-=======
 
->>>>>>> 25de31c Add readme
 Running this sample
 ---
 
