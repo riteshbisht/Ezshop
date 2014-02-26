@@ -1,17 +1,19 @@
-This README.md file is displayed on your project page. You should edit this 
-file to describe your project, including instructions for building and 
-running the project, pointers to the license under which you are making the 
-project available, and anything else you think would be useful for others to
-know.
+Sample: BlueListAndroidv0
+===
 
-We have created an empty license.txt file for you. Well, actually, it says,
-"<Replace this text with the license you've chosen for your project.>" We 
-recommend you edit this and include text for license terms under which you're
-making your code available. A good resource for open source licenses is the 
-[Open Source Initiative] (http://opensource.org/).
+The BlueListAndroidv0 sample is the base version of BlueList, a simple grocery list application.  In v0, the items do not persist to a mobile backend. If you want to persist items to a mobile backend, use the BlueListAndroidv1 sample.
 
-Be sure to update your project's profile with a short description and 
-eye-catching graphic.
+This sample works with the Mobile Backend Starter, an application boilerplate that is available on [Codename: Bluemix](https://www.ng.bluemix.net).  With this boilerplate, you can quickly incorporate pre-built, managed, and scalable cloud services into your mobile applications without relying on IT involvement. You can focus on building your mobile applications rather than the complexities of managing the back end infrastructure.
 
-Finally, consider defining a timeline and work items on the "Current Work" tab 
-to give interested developers a sense of your cadence and upcoming enhancements.
+
+Downloading this sample
+---
+You can clone this sample from Jazzhub with the following command: 
+
+    git clone https://hub.jazz.net/git/mobilecloud/BlueListAndroidv0
+
+Running this sample
+---
+
+See the instructions in [Build an Android app using the Mobile Data cloud service](http://www.ibm.com/developerworks/library/mo-android-mobiledata-app/index.html) for more information about how to import this sample into your Android development environment and run the sample in a mobile emulator.
+
