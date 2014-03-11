@@ -6,7 +6,6 @@
 *.dex
 
 #often changed files
-/assets
 /libs
 
 # generated files
