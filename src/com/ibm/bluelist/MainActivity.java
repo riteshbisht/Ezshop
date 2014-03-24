@@ -23,6 +23,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.log;
 import android.view.ActionMode;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -177,14 +178,6 @@ public class MainActivity extends Activity {
 				return lhsName.compareToIgnoreCase(rhsName);
 			}
 		});
-	}
-	
-	private void updateOtherDevices() {
-		String module = "itemlist";
-		String function = "sendUpdateNotification";
-		// This is a shortcut for invoking cloud functions
-		IBMBaaS.getPluginManager().getPluginByClass(IBMCloudCodeService.class)
-			.callFunction(module, function);
 	}
 	
 	private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
