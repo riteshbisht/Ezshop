@@ -15,7 +15,6 @@
  */
 
 package com.ibm.bluelist;
-import android.util.Log;
 
 public class Item {
 	public String name;

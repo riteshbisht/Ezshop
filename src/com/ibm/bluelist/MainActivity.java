@@ -178,15 +178,7 @@ public class MainActivity extends Activity {
 			}
 		});
 	}
-	
-	private void updateOtherDevices() {
-		String module = "itemlist";
-		String function = "sendUpdateNotification";
-		// This is a shortcut for invoking cloud functions
-		IBMBaaS.getPluginManager().getPluginByClass(IBMCloudCodeService.class)
-			.callFunction(module, function);
-	}
-	
+		
 	private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
 	    public boolean onCreateActionMode(ActionMode mode, Menu menu) {
 	        /* Inflate a menu resource with context menu items*/
