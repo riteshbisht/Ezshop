@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		979353FD1936E62A0024CFB7 /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 979353FC1936E62A0024CFB7 /* configuration.plist */; };
 		FA39EA2518633FB400FB525E /* IBM_Item.m in Sources */ = {isa = PBXBuildFile; fileRef = FA39EA2418633FB400FB525E /* IBM_Item.m */; };
 		FAD04BD71862058500DE0A19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD04BD61862058500DE0A19 /* Foundation.framework */; };
 		FAD04BD91862058500DE0A19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD04BD81862058500DE0A19 /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		979353FC1936E62A0024CFB7 /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
 		FA39EA2318633FB400FB525E /* IBM_Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBM_Item.h; sourceTree = "<group>"; };
 		FA39EA2418633FB400FB525E /* IBM_Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBM_Item.m; sourceTree = "<group>"; };
 		FAD04BD31862058500DE0A19 /* BlueList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				FAD04BDE1862058500DE0A19 /* BlueList-Info.plist */,
 				FAD04BDF1862058500DE0A19 /* InfoPlist.strings */,
 				FAD04BE41862058500DE0A19 /* BlueList-Prefix.pch */,
+				979353FC1936E62A0024CFB7 /* configuration.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD04BE11862058500DE0A19 /* InfoPlist.strings in Resources */,
+				979353FD1936E62A0024CFB7 /* configuration.plist in Resources */,
 				FAD04C061862250000DE0A19 /* main.storyboard in Resources */,
 				FAD04BE91862058500DE0A19 /* Images.xcassets in Resources */,
 			);
