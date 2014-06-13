@@ -12,6 +12,7 @@ You can clone this sample from IBM DevOps Services with the following command:
 
     git clone https://hub.jazz.net/git/mobilecloud/bluelist-base
 
+The bluelist-base-iOS sample will be located within the bluelist-base directory you just created.
 
 Running this iOS sample (bluelist-base-iOS)
 ---
