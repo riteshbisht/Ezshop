@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		979353FD1936E62A0024CFB7 /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 979353FC1936E62A0024CFB7 /* configuration.plist */; };
+		979353FD1936E62A0024CFB7 /* bluelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 979353FC1936E62A0024CFB7 /* bluelist.plist */; };
 		FA39EA2518633FB400FB525E /* IBM_Item.m in Sources */ = {isa = PBXBuildFile; fileRef = FA39EA2418633FB400FB525E /* IBM_Item.m */; };
 		FAD04BD71862058500DE0A19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD04BD61862058500DE0A19 /* Foundation.framework */; };
 		FAD04BD91862058500DE0A19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD04BD81862058500DE0A19 /* CoreGraphics.framework */; };
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		979353FC1936E62A0024CFB7 /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
+		979353FC1936E62A0024CFB7 /* bluelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bluelist.plist; sourceTree = "<group>"; };
 		FA39EA2318633FB400FB525E /* IBM_Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBM_Item.h; sourceTree = "<group>"; };
 		FA39EA2418633FB400FB525E /* IBM_Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBM_Item.m; sourceTree = "<group>"; };
 		FAD04BD31862058500DE0A19 /* BlueList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97B8E0C3194F47230029F5D3 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FAD04BE51862058500DE0A19 /* IBM_AppDelegate.h */,
+				FAD04BE61862058500DE0A19 /* IBM_AppDelegate.m */,
+			);
+			name = delegate;
+			sourceTree = "<group>";
+		};
 		FA39EA2218633F8900FB525E /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +134,8 @@
 			children = (
 				FAD04C051862250000DE0A19 /* main.storyboard */,
 				FAD04BE21862058500DE0A19 /* main.m */,
-				FAD04BE51862058500DE0A19 /* IBM_AppDelegate.h */,
-				FAD04BE61862058500DE0A19 /* IBM_AppDelegate.m */,
 				FAD04C071862339F00DE0A19 /* controller */,
+				97B8E0C3194F47230029F5D3 /* delegate */,
 				FA39EA2218633F8900FB525E /* model */,
 				FAD04BE81862058500DE0A19 /* Images.xcassets */,
 				FAD04BDD1862058500DE0A19 /* Supporting Files */,
@@ -141,7 +149,7 @@
 				FAD04BDE1862058500DE0A19 /* BlueList-Info.plist */,
 				FAD04BDF1862058500DE0A19 /* InfoPlist.strings */,
 				FAD04BE41862058500DE0A19 /* BlueList-Prefix.pch */,
-				979353FC1936E62A0024CFB7 /* configuration.plist */,
+				979353FC1936E62A0024CFB7 /* bluelist.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD04BE11862058500DE0A19 /* InfoPlist.strings in Resources */,
-				979353FD1936E62A0024CFB7 /* configuration.plist in Resources */,
+				979353FD1936E62A0024CFB7 /* bluelist.plist in Resources */,
 				FAD04C061862250000DE0A19 /* main.storyboard in Resources */,
 				FAD04BE91862058500DE0A19 /* Images.xcassets in Resources */,
 			);
