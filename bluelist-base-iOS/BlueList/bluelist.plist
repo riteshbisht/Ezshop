@@ -3,6 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>applicationId</key>
-	<string></string>
+	<string>&lt;INSERT_APP_ID&gt;</string>
+	<key>applicationSecret</key>
+	<string>&lt;INSERT_APP_SECRET&gt;</string>
+	<key>applicationRoute</key>
+	<string>&lt;INSERT_APP_ROUTE&gt;</string>
 </dict>
 </plist>
