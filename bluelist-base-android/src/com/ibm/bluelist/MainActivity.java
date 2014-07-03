@@ -60,16 +60,16 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		/*use application class to maintain global state*/
+		/* Use application class to maintain global state*/
 		blApplication = (BlueListApplication) getApplication();
 		itemList = blApplication.getItemList();
 		
-		/*set up the array adapter for items list view*/
+		/* Set up the array adapter for items list view*/
 		ListView itemsLV = (ListView)findViewById(R.id.itemsList);
 		lvArrayAdapter = new ArrayAdapter<Item>(this, R.layout.list_item_1, itemList);
 		itemsLV.setAdapter(lvArrayAdapter);
 
-		/*set long click listener*/
+		/* Set long click listener*/
 		itemsLV.setOnItemLongClickListener(new OnItemLongClickListener() {
 		    /* Called when the user long clicks on the textview in the list*/
 		    public boolean onItemLongClick(AdapterView<?> adapter, View view, int position,
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 		    }
 		});
 		EditText itemToAdd = (EditText) findViewById(R.id.itemToAdd);
-		/*set key listener for edittext (done key to accept item to list)*/
+		/* Set key listener for edittext (done key to accept item to list)*/
 		itemToAdd.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -108,14 +108,14 @@ public class MainActivity extends Activity {
 	}
 	
 	/**
-	 * on return from other activity, check result code to determine behavior
+	 * On return from other activity, check result code to determine behavior.
 	 */
 	@Override
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
 		switch (resultCode)
 		{
-		/*if an edit has been made, notify that the data set has changed.*/
+		/* If an edit has been made, notify that the data set has changed.*/
 		case BlueListApplication.EDIT_ACTIVITY_RC:
 			sortItems(itemList);
 			lvArrayAdapter.notifyDataSetChanged();
@@ -124,7 +124,7 @@ public class MainActivity extends Activity {
     }
 	
 	/**
-	 * called on done and will add item to list.
+	 * Called on done and will add item to list.
 	 *
 	 * @param  v edittext View to get item from.
 	 */	
@@ -137,17 +137,17 @@ public class MainActivity extends Activity {
 			sortItems(itemList);
 			blApplication.setItemList(itemList);
 			lvArrayAdapter.notifyDataSetChanged();
-			//set text field back to empty
+			// Set text field back to empty
 			itemToAdd.setText("");
 		}
 	}
 	
 	/**
-	 * will delete an item from the list, based on last item to be long-clicked
+	 * Will delete an item from the list, based on last item to be long-clicked
 	 *
 	 */
 	public void deleteItem(Item item) {
-		/*remove item, set itemList of blApplication, notify adapter of data change*/
+		/* Remove item, set itemList of blApplication, notify adapter of data change*/
 		itemList.remove(listItemPosition);
 		blApplication.setItemList(itemList);
 		lvArrayAdapter.notifyDataSetChanged();
@@ -165,11 +165,11 @@ public class MainActivity extends Activity {
 	}
 	
 	/**
-	 * sort a list of Items
+	 * Sort a list of Items
 	 * @param List<Item> theList
 	 */
 	private void sortItems(List<Item> theList) {
-		//sort collection by case insensitive alphabetical order
+		// Sort collection by case insensitive alphabetical order.
 		Collections.sort(theList, new Comparator<Item>() {
 			public int compare(Item lhs,
 					Item rhs) {
@@ -193,22 +193,22 @@ public class MainActivity extends Activity {
 	    }
 
 		/**
-		 * called when user clicks on contextual action bar menu item
+		 * Called when user clicks on contextual action bar menu item.
 		 * 
-		 * Determined which item was clicked, and then determine behavior appropriately
+		 * Determines which item was clicked, and then determine behavior appropriately.
 		 *
 		 * @param ActionMode mode and MenuItem item clicked
 		 */
 	    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
 	    	Item lItem = itemList.get(listItemPosition);
-	    	/*switch dependent on which action item was clicked*/
+	    	/* Switch dependent on which action item was clicked*/
 	    	switch (item.getItemId()) {
-	    		/*on edit, get all info needed & send to new, edit activity.*/
+	    		/* On edit, get all info needed & send to new, edit activity.*/
 	            case R.id.action_edit:
 	            	updateItem(lItem.getName());
 	                mode.finish(); /* Action picked, so close the CAB*/
 	                return true;
-	            /*on delete, remove list item & update.*/
+	            /* On delete, remove list item & update.*/
 	            case R.id.action_delete:
 	            	deleteItem(lItem);
 	                mode.finish(); /* Action picked, so close the CAB*/

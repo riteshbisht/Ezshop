@@ -69,7 +69,7 @@ public final class BlueListApplication extends Application {
 	}
 	
 	/**
-	 * returns the itemList, an array of Item objects.
+	 * Returns the itemList, an array of Item objects.
 	 * @return itemList
 	 */
 	public List<Item> getItemList() {
