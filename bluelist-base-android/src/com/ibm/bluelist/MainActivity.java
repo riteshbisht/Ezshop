@@ -60,31 +60,31 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		/* Use application class to maintain global state*/
+		/* Use application class to maintain global state. */
 		blApplication = (BlueListApplication) getApplication();
 		itemList = blApplication.getItemList();
 		
-		/* Set up the array adapter for items list view*/
+		/* Set up the array adapter for items list view. */
 		ListView itemsLV = (ListView)findViewById(R.id.itemsList);
 		lvArrayAdapter = new ArrayAdapter<Item>(this, R.layout.list_item_1, itemList);
 		itemsLV.setAdapter(lvArrayAdapter);
 
-		/* Set long click listener*/
+		/* Set long click listener. */
 		itemsLV.setOnItemLongClickListener(new OnItemLongClickListener() {
-		    /* Called when the user long clicks on the textview in the list*/
+		    /* Called when the user long clicks on the textview in the list. */
 		    public boolean onItemLongClick(AdapterView<?> adapter, View view, int position,
 	                long rowId) {
 		    	listItemPosition = position;
 				if (mActionMode != null) {
 		            return false;
 		        }
-		        /* Start the contextual action bar using the ActionMode.Callback*/
+		        /* Start the contextual action bar using the ActionMode.Callback. */
 		        mActionMode = MainActivity.this.startActionMode(mActionModeCallback);
 		        return true;
 		    }
 		});
 		EditText itemToAdd = (EditText) findViewById(R.id.itemToAdd);
-		/* Set key listener for edittext (done key to accept item to list)*/
+		/* Set key listener for edittext (done key to accept item to list). */
 		itemToAdd.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -98,7 +98,7 @@ public class MainActivity extends Activity {
 	}
 
 	/**
-	 * Removes text on click of x button
+	 * Removes text on click of x button.
 	 *
 	 * @param  v the edittext view.
 	 */
@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
     {
 		switch (resultCode)
 		{
-		/* If an edit has been made, notify that the data set has changed.*/
+		/* If an edit has been made, notify that the data set has changed. */
 		case BlueListApplication.EDIT_ACTIVITY_RC:
 			sortItems(itemList);
 			lvArrayAdapter.notifyDataSetChanged();
@@ -137,24 +137,24 @@ public class MainActivity extends Activity {
 			sortItems(itemList);
 			blApplication.setItemList(itemList);
 			lvArrayAdapter.notifyDataSetChanged();
-			// Set text field back to empty
+			// Set text field back to empty.
 			itemToAdd.setText("");
 		}
 	}
 	
 	/**
-	 * Will delete an item from the list, based on last item to be long-clicked
+	 * Will delete an item from the list, based on last item to be long-clicked.
 	 *
 	 */
 	public void deleteItem(Item item) {
-		/* Remove item, set itemList of blApplication, notify adapter of data change*/
+		/* Remove item, set itemList of blApplication, and notify adapter of data change. */
 		itemList.remove(listItemPosition);
 		blApplication.setItemList(itemList);
 		lvArrayAdapter.notifyDataSetChanged();
 	}
 	
 	/**
-	 * Will call new activity for editing item on list
+	 * Will call new activity for editing item on list.
 	 * @parm String name - name of the item.
 	 */
 	public void updateItem(String name) {
@@ -165,7 +165,7 @@ public class MainActivity extends Activity {
 	}
 	
 	/**
-	 * Sort a list of Items
+	 * Sort a list of Items.
 	 * @param List<Item> theList
 	 */
 	private void sortItems(List<Item> theList) {
@@ -182,7 +182,7 @@ public class MainActivity extends Activity {
 	
 	private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
 	    public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-	        /* Inflate a menu resource with context menu items*/
+	        /* Inflate a menu resource with context menu items. */
 	        MenuInflater inflater = mode.getMenuInflater();
 	        inflater.inflate(R.menu.editaction, menu);
 	        return true;
@@ -201,23 +201,23 @@ public class MainActivity extends Activity {
 		 */
 	    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
 	    	Item lItem = itemList.get(listItemPosition);
-	    	/* Switch dependent on which action item was clicked*/
+	    	/* Switch dependent on which action item was clicked. */
 	    	switch (item.getItemId()) {
-	    		/* On edit, get all info needed & send to new, edit activity.*/
+	    		/* On edit, get all info needed & send to new, edit activity. */
 	            case R.id.action_edit:
 	            	updateItem(lItem.getName());
-	                mode.finish(); /* Action picked, so close the CAB*/
+	                mode.finish(); /* Action picked, so close the CAB. */
 	                return true;
-	            /* On delete, remove list item & update.*/
+	            /* On delete, remove list item & update. */
 	            case R.id.action_delete:
 	            	deleteItem(lItem);
-	                mode.finish(); /* Action picked, so close the CAB*/
+	                mode.finish(); /* Action picked, so close the CAB. */
 	            default:
 	                return false;
 	        }
 	    }
 
-	    /* Called on exit of action mode*/
+	    /* Called on exit of action mode. */
 	    public void onDestroyActionMode(ActionMode mode) {
 	        mActionMode = null;
 	    }

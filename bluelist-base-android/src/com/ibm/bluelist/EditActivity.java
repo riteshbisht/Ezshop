@@ -42,25 +42,25 @@ public class EditActivity extends Activity {
 	/**
 	 * onCreate called when edit activity is created.
 	 * 
-	 * Sets up the application, sets listeners, and gets intent info from calling activity
+	 * Sets up the application, sets listeners, and gets intent info from calling activity.
 	 *
 	 * @param savedInstanceState
 	 */
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		/* Get application context, item list*/
+		/* Get application context, item list. */
 		blApplication = (BlueListApplication) getApplicationContext();
 		itemList = blApplication.getItemList();
 		setContentView(R.layout.activity_edit);
 		
-		/* Information required to edit item*/
+		/* Information required to edit item. */
 		Intent intent = getIntent();
 	    originalItem = intent.getStringExtra("ItemText");
 	    location = intent.getIntExtra("ItemLocation", 0);
 		EditText itemToEdit = (EditText) findViewById(R.id.itemToEdit);
 		itemToEdit.setText(originalItem);
 		
-		/* Set key listener for edittext (done key to accept item to list)*/
+		/* Set key listener for edittext (done key to accept item to list). */
 		itemToEdit.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -83,11 +83,11 @@ public class EditActivity extends Activity {
 		String text = itemToEdit.getText().toString();
 		item.setName(text);
 		Intent returnIntent = new Intent();
-		/* Remove old item & add new item*/
+		/* Remove old item & add new item. */
 		itemList.remove(location);
 		itemList.add(location, item);
 		blApplication.setItemList(itemList);
-		/* Return with edit code.*/
+		/* Return with edit code. */
 		setResult(BlueListApplication.EDIT_ACTIVITY_RC, returnIntent);
 		finish();
 	}
