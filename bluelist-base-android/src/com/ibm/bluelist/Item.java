@@ -33,7 +33,7 @@ public class Item {
 	}
 
 	/**
-	 * Sets the name of a list item, as well as calls setCreationTime()
+	 * Sets the name of a list item, as well as calls setCreationTime().
 	 * @param String itemName
 	 */
 	public void setName(String itemName) {
