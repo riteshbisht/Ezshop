@@ -15,6 +15,9 @@ repositories {
 apply plugin: 'android'
 
 dependencies {
+	// Add custom maven dependencies here
+	// *and/or*
+	// Add any additional dependencies to your custom project by dropping them into the 'libs' directory
     compile fileTree(dir: 'libs', include: '*.jar')
 
 }
@@ -25,11 +28,17 @@ android {
 
     sourceSets {
         main {
+            // Need Android Manifest to build
             manifest.srcFile 'AndroidManifest.xml'
+			// BlueList Java code
             java.srcDirs = ['src']
+			// Your own code?
             resources.srcDirs = ['src']
+			// More of your own code?
             aidl.srcDirs = ['src']
+			// Even more of your own code?
             renderscript.srcDirs = ['src']
+			
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
         }
@@ -46,4 +55,12 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+}
+
+// The wrapper task allows the distribution of your software that can be built 
+// with a quick call of 'gradlew' without the need to install gradle.
+// NOTE: This can only be done if 'gradle wrapper' is called prior to distribution.
+// See more info on the gradle wrapper here--> http://www.gradle.org/docs/current/userguide/gradle_wrapper.html
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
 }
