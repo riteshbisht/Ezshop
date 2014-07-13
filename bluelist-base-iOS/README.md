@@ -8,6 +8,7 @@ This sample works with the Mobile Cloud, an application boilerplate that is avai
 
 Downloading this sample
 ---
+
 You can clone this sample from IBM DevOps Services with the following command:
 
     git clone https://hub.jazz.net/git/mobilecloud/bluelist-base
@@ -29,10 +30,14 @@ dependencies listed in your podfile using the following command:
 
       pod install
 
+Keep in mind that when using cocoapods, you must use the app's .xcworkspace file, and not
+the .xcodeproj file.
+
 
 Running this iOS sample (bluelist-base-iOS)
 ---
 
-You may now open the project's .xcworkspace file, and get started!
+You may now open the project's .xcworkspace file (if using cocoapods), and get started!
 
 See the instructions in [Build an iOS app using the Mobile Data cloud service](http://www.ibm.com/developerworks/library/mo-ios-mobiledata-app/index.html) for more information about how to import this sample into your Xcode development environment and run the sample in a mobile emulator.
+Note: If you've installed dependencies using cocoapods, you may skip steps: 1.7-1.9
