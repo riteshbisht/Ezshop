@@ -15,6 +15,9 @@ You can clone this sample from IBM DevOps Services with the following command:
 
 The bluelist-base-iOS sample will be located within the bluelist-base directory you just created.
 
+You can run this sample immediately, by open the .xcodeproj file and clicking the Play button.
+The below instructions are for moving this sample from bluelist-base to bluelist-mobiledata.
+
 Downloading the Dependencies
 ---
 
