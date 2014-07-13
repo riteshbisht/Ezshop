@@ -5,6 +5,13 @@ The bluelist-base-iOS sample is the base version of BlueList, a simple grocery l
 
 This sample works with the Mobile Cloud, an application boilerplate that is available on [IBM Bluemix](https://www.ng.bluemix.net).  With this boilerplate, you can quickly incorporate pre-built, managed, and scalable cloud services into your mobile applications without relying on IT involvement. You can focus on building your mobile applications rather than the complexities of managing the backend infrastructure.
 
+Creating the Mobile Cloud boilerplate application
+---
+1. Login to [IBM Bluemix](https://www.bluemix.net)
+2. Click 'Catalog' or 'Create An App'
+3. Under Boilerplates, select Mobile Cloud.
+4. Enter in App Info & select 'Create'
+5. You now have a mobile cloud backend, providing you with some mobile services on the cloud!
 
 Downloading this sample
 ---
