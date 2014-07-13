@@ -14,11 +14,9 @@ You can clone this sample from IBM DevOps Services with the following command:
 
 The bluelist-base-iOS sample will be located within the bluelist-base directory you just created.
 
-Running this iOS sample (bluelist-base-iOS)
----
-
 Downloading the Dependencies
 ---
+
 You can now download the dependencies for this sample using cocoapods!
 This will enable you to skip the SDK download instructions in the article below.
 
@@ -31,7 +29,10 @@ dependencies listed in your podfile using the following command:
 
       pod install
 
-You may now open the project's .xcworkspace file, and get started!
+
+Running this iOS sample (bluelist-base-iOS)
 ---
+
+You may now open the project's .xcworkspace file, and get started!
 
 See the instructions in [Build an iOS app using the Mobile Data cloud service](http://www.ibm.com/developerworks/library/mo-ios-mobiledata-app/index.html) for more information about how to import this sample into your Xcode development environment and run the sample in a mobile emulator.
