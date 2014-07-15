@@ -24,6 +24,6 @@ The bluelist-base-android sample will be located within the bluelist-base direct
 Running this Android sample (bluelist-base-android)
 ---
 
-After cloning you can then import and build the bluelist-android-base code into your Android development environment. Run this code in your android mobile emulator. Restart the application, and notice that the list items do not persist.
+After cloning you can then import the bluelist-android-base code into your Android development environment. Build and run this code in your android mobile emulator. Restart the application, and notice that the list items do not persist.
 
 If you'd like to utilize the mobile data service, so that your items do persist, see the instructions in [Build an Android app using the Mobile Data cloud service](http://www.ibm.com/developerworks/library/mo-android-mobiledata-app/index.html).
