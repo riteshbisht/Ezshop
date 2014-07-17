@@ -15,10 +15,15 @@ repositories {
 apply plugin: 'android'
 
 dependencies {
-	// Add custom maven dependencies here
+	// Add custom maven dependencies here (Uncomment Below 3 lines to utilize mobileData)
+	// compile 'com.ibm.mobile.services:ibmdata:1.+'
+    // compile 'com.ibm.mobile.services:ibmbluemix:1.+'
+    // compile 'com.ibm.mobile.services:ibmfilesync:1.+'
+	
 	// *and/or*
-	// Add any additional dependencies to your custom project by dropping them into the 'libs' directory
-    compile fileTree(dir: 'libs', include: '*.jar')
+	
+	// Uncomment Below to add any additional dependencies to your custom project by dropping them into the 'libs' directory
+    // compile fileTree(dir: 'libs', include: '*.jar')
 
 }
 
