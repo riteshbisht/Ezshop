@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71038BF819E4910500419080 /* BlueList_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71038BF719E4910500419080 /* BlueList_Tests.m */; };
 		979353FD1936E62A0024CFB7 /* bluelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 979353FC1936E62A0024CFB7 /* bluelist.plist */; };
 		97DEC6BB19731B3700E7DB8C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DEC6BA19731B3700E7DB8C /* libsqlite3.0.dylib */; };
 		97DEC6BD19731B3A00E7DB8C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DEC6BC19731B3A00E7DB8C /* libsqlite3.dylib */; };
@@ -23,7 +24,20 @@
 		FAD04C0D1862340500DE0A19 /* IBM_CreateEditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD04C0C1862340500DE0A19 /* IBM_CreateEditItemViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		71038BF919E4910500419080 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD04BCB1862058500DE0A19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAD04BD21862058500DE0A19;
+			remoteInfo = BlueList;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		71038BF319E4910500419080 /* BlueList Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BlueList Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71038BF619E4910500419080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71038BF719E4910500419080 /* BlueList_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueList_Tests.m; sourceTree = "<group>"; };
 		979353FC1936E62A0024CFB7 /* bluelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bluelist.plist; sourceTree = "<group>"; };
 		97DEC6BA19731B3700E7DB8C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		97DEC6BC19731B3A00E7DB8C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -49,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		71038BF019E4910500419080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAD04BD01862058500DE0A19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71038BF419E4910500419080 /* BlueList Tests */ = {
+			isa = PBXGroup;
+			children = (
+				71038BF719E4910500419080 /* BlueList_Tests.m */,
+				71038BF519E4910500419080 /* Supporting Files */,
+			);
+			path = "BlueList Tests";
+			sourceTree = "<group>";
+		};
+		71038BF519E4910500419080 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71038BF619E4910500419080 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		97B8E0C3194F47230029F5D3 /* delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD04BDC1862058500DE0A19 /* BlueList */,
+				71038BF419E4910500419080 /* BlueList Tests */,
 				FAD04BD51862058500DE0A19 /* Frameworks */,
 				FAD04BD41862058500DE0A19 /* Products */,
 			);
@@ -95,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD04BD31862058500DE0A19 /* BlueList.app */,
+				71038BF319E4910500419080 /* BlueList Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +191,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		71038BF219E4910500419080 /* BlueList Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71038BFD19E4910500419080 /* Build configuration list for PBXNativeTarget "BlueList Tests" */;
+			buildPhases = (
+				71038BEF19E4910500419080 /* Sources */,
+				71038BF019E4910500419080 /* Frameworks */,
+				71038BF119E4910500419080 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71038BFA19E4910500419080 /* PBXTargetDependency */,
+			);
+			name = "BlueList Tests";
+			productName = "BlueList Tests";
+			productReference = 71038BF319E4910500419080 /* BlueList Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FAD04BD21862058500DE0A19 /* BlueList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAD04BFF1862058500DE0A19 /* Build configuration list for PBXNativeTarget "BlueList" */;
@@ -177,6 +235,12 @@
 				CLASSPREFIX = IBM_BL;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "International Business Machines";
+				TargetAttributes = {
+					71038BF219E4910500419080 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = FAD04BD21862058500DE0A19;
+					};
+				};
 			};
 			buildConfigurationList = FAD04BCE1862058500DE0A19 /* Build configuration list for PBXProject "BlueList" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -191,11 +255,19 @@
 			projectRoot = "";
 			targets = (
 				FAD04BD21862058500DE0A19 /* BlueList */,
+				71038BF219E4910500419080 /* BlueList Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		71038BF119E4910500419080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAD04BD11862058500DE0A19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +282,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		71038BEF19E4910500419080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71038BF819E4910500419080 /* BlueList_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAD04BCF1862058500DE0A19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,6 +304,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		71038BFA19E4910500419080 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAD04BD21862058500DE0A19 /* BlueList */;
+			targetProxy = 71038BF919E4910500419080 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FAD04BDF1862058500DE0A19 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -236,6 +324,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		71038BFB19E4910500419080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "BlueList Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueList.app/BlueList";
+			};
+			name = Debug;
+		};
+		71038BFC19E4910500419080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "BlueList Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueList.app/BlueList";
+			};
+			name = Release;
+		};
 		FAD04BFD1862058500DE0A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -353,6 +483,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		71038BFD19E4910500419080 /* Build configuration list for PBXNativeTarget "BlueList Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71038BFB19E4910500419080 /* Debug */,
+				71038BFC19E4910500419080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FAD04BCE1862058500DE0A19 /* Build configuration list for PBXProject "BlueList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
